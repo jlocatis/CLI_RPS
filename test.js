@@ -1,39 +1,39 @@
-var prompt = require('prompt');
+weapon = ['Rock', 'Paper', 'Scissors'];
 
-prompt.start();
-
-prompt.get(['player1', 'player2'], function (err, result) {
-	console.log('Player choices:');
-    console.log('Player 1 Choice: ' + result.player1);
-    console.log('Player 2 Choice: ' + result.player2);
-
-if (result.player1 == result.player2) {
-	console.log("The game ends in a tie.")	
-} else if (result.player1 == 'Rock') {
-	if (result.player2 == 'Scissors') {
-		console.log("Player 1 wins!")
-	} else {
-		console.log("Player 2 wins!")
-	}
-} else if (result.player1 == 'Paper') {
-	if (result.player2 == 'Rock') {
-		console.log("Player 1 wins!")
-	} else {
-		console.log("Player 2 wins!")
-	}
-} else if (result.player1 == 'Scissors') {
-	if (result.player2 == 'Paper') {
-		console.log("Player 1 wins!")
-	} else {
-		console.log("Player 2 wins!")
+for (var x=0; x < 3; x++){
+	for (var y=0; y < 3; y++){
+		playGame(weapon[x],weapon[y]);
 	}
 }
-});
 
-function testEquality (expected, actual) {
+function playGame(player1, player2) {
+	if (player1 == player2) {
+		console.log("The game ends in a tie.") 
+	} else if (player1 == 'Rock') {
+		if (player2 == 'Scissors') {
+			console.log("Player 1 wins!")
+		} else {
+			console.log("Player 2 wins!")
+		}
+	} else if (player1 == 'Paper') {
+		if (player2 == 'Rock') {
+			console.log("Player 1 wins!")
+		} else {
+			console.log("Player 2 wins!")
+		}
+	} else if (player1 == 'Scissors') {
+		if (player2 == 'Paper') {
+			console.log("Player 1 wins!")
+		} else {
+			console.log("Player 2 wins!")
+		}
+	}
+}
+
+function testRPS(expected, actual) {
 	if (expected == actual) {
-		console.log("Working?");
+		console.log("Pass! It works!!");
 	} else {
-		console.log("Try again!");
+		console.log("Fail :( Try again.")
 	}
 }
