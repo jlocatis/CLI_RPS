@@ -1,5 +1,4 @@
 
-function getWeapons(){
 var prompt = require('prompt');
 // Start the JavaScript node prompt code
 prompt.start();
@@ -23,14 +22,18 @@ prompt.get([{
 	console.log('Player choices:');
     console.log('Player 1 Choice: ' + result.player1);
     console.log('Player 2 Choice: ' + result.player2);
-    testWeapons(result.player1, result.player2);
+    var player1 = result.player1;
+    var player2 = result.player2;
+    testWeapons(player1, player2);
 });
-}
 
 // Test to see which player won. If/else statement is designed around
 // player1's weapon choice and comparing it to player2. For example,
 // if player1 chooses rock, we know that player1 will beat scissors,
 // otherwise the only other option (in this case paper) would beat player1.
+var tie = 0;
+var p1 = 1;
+var p2 = 2;
 function testWeapons(player1, player2) {
 	if (player1 == player2) {
 		console.log("The game ends in a tie.")
@@ -61,5 +64,3 @@ function testWeapons(player1, player2) {
 		}
 	}
 }
-
-getWeapons();
