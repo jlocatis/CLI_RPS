@@ -1,3 +1,4 @@
+#Prompts for player1 and player2 weapons at the beginning of every round.
 def getWeapons()
 	puts "Player 1 * Choose a weapon: "
 	p1_weapon = gets.chomp
@@ -6,6 +7,7 @@ def getWeapons()
 	determineWinner(p1_weapon, p2_weapon)
 end
 
+#Takes player1 and player2 weapons from above and tests for a winner.
 def determineWinner(p1_weapon, p2_weapon)
 	if p1_weapon == "rock"
 		if p2_weapon == "paper"
@@ -44,6 +46,7 @@ def determineWinner(p1_weapon, p2_weapon)
 	return text
 end
 
+#Updates the score for player1, player2, and ties.
 def updateScore(score, result)
 	if result == "Player 1 wins this round!"
 		score[0] += 1
@@ -55,6 +58,7 @@ def updateScore(score, result)
 	return score
 end
 
+#Prints the winner.
 def gameEnd(score)
 	if score[0] == 3
 		puts "Player 1 wins the game!!"
