@@ -1,0 +1,18 @@
+<% if @p1current_score == 3 || @p2current_score == 3 %>
+	<% if @p1current_score == 3 %>
+		<p>Player 1 wins the game!!</p>
+		<p><a href="/">Start a new game</a></p>
+	<% elsif @p2current_score == 3 %>
+		<p>Player 2 wins the game!!</p>
+		<p><a href="/">Start a new game</a></p>
+	<% end %>
+<% else %>
+	<%= @message %>
+
+	<p><strong>Current score:</strong><br>
+	Player 1: <%= @p1current_score %><br>
+	Player 2: <%= @p2current_score %><br>
+	Ties: <%= @current_ties %></p>
+
+	<p><a href="/player1">Start next round</a></p>
+<% end %>
