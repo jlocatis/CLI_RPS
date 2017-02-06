@@ -1,4 +1,5 @@
-#Takes player1 and player2 weapons and tests for a winner.
+#Takes Player 1 and Player 2 weapon choices and tests for a winner. Returns
+#the winner back to get("/playgame") controller to update the session scores.
 def determineWinner(p1_weapon, p2_weapon)
 	win = [0,0,0]
 	#[player1, player2, tie]

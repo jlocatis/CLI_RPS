@@ -1,10 +1,9 @@
-BEST OF FIVE ROCK, PAPER, SCISSORS
-This is a program that plays the game Rock, Paper, Scissors. It is written in Ruby. It will be a best of five series of games between two players. It tracks individual scores between both players as well as any ties that occur.
+This is a program that allows two players to play a best of five series of the game Rock, Paper, Scissors. It is written in Ruby, and runs on the Sinatra framework for use on the web. It tracks individual scores and allows for weapon choice input on separate pages so players do not have to see what the other is choosing.
 
 SETUP
-You can run the game from the main.rb file, but it will require the functions.rb file in the same directory in order to run. Simply head to your command line terminal and type in "main ruby.rb".
+To run the game locally you will need to install a version of the Sinatra framework on your device. The program runs from the web.rb file. Running this in your terminal will start Sinatra, usually using port 4567. Access the game through your web browser by going to "http://localhost:4567" (replace 4567 if your version of Sinatra loads onto a different port), this will bring you to the instructions page where you can start the game.
 
 HOW TO USE
-The game will prompt for each player one at a time. Unfortunately as written Player 2 will always see what Player 1 enters. After both players have entered their selections the game will determine the winner of the round and display the current score for the game. Once a player reaches three wins the program will declare a winner and the game is over!
+Instructions are provided at the start of the game, read through these first before playing. The game will allow each player to input their weapon one at a time, so Player 2 won't see what Player 1 inputs (as long as they look away from the screen!). The game keeps track of current scores at the end of each round. Once one player reaches three, the game will declare them the winner.
 
-The program's functions may also be tested by running test.rb.
+If at any point you wish to start the game over a "Return Home / Cancel Game" button is available at the bottom of every page.
